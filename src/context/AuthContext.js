@@ -11,6 +11,8 @@ const authReducer = (state, action) => {
             return { errorMessage:'', token: action.payload };
         case 'clear-error-message':
             return { ...state, errorMessage: '' };
+        case 'signout' :
+            return { token: null, errorMessage: '' };
         default:
             return state;
     }
